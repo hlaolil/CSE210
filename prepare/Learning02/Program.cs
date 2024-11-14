@@ -4,18 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        job1 = new job()
-        job1._jobTitle = "Pharmacist";
-        job1._company = "Naleli";
-        job1._startYear = 2015;
-        job1._endYear = 2025;
-        job1.JobInfo();
-
-        job2 = new job()
-        job2._jobTitle = "Pastor";
-        job2._company = "AGL";
-        job2._startYear = 2021;
-        job2._endYear = 2025;
-        job2.JobInfo();
+        var job1 = new Job("Naleli", "Pharmacist", 2015, 2025);
+        var job2 = new Job("AGL", "Pastor", 2021, 2025);
+        var jobList = new List<Job> {job1, job2};
+        var Resume = new Resume("Letlotlo Hlaoli", jobList);
+        Resume.WorkExperience();
     }
 }
