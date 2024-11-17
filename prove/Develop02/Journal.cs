@@ -8,7 +8,7 @@ public class Journal
 
    public Journal(List<Entry> entries)
    {
-      _entries = entri ?? new List<Entry>();
+      _entries = entries ?? new List<Entry>();
    }
 
    public void AddEntry(Entry newEntry)
@@ -44,8 +44,12 @@ public class Journal
             }
             Console.WriteLine("Journal saved successfully.\n");
         }
-        
-    }
+        catch (Exception ex) // Added catch block for safety
+        {
+            Console.WriteLine($"Error saving journal: {ex.Message}");
+        }
+    } // <-- Closing brace for method
+    
 
     // Load the journal from a file
     public void LoadFromFile(string filename)
@@ -81,8 +85,13 @@ public class Journal
             }
             Console.WriteLine("Journal loaded successfully.\n");
         }
+        catch (Exception ex) // Added catch block for safety
+        {
+            Console.WriteLine($"Error loading journal: {ex.Message}");
+        }
+    } // <-- Closing brace for method
         
-    }
 }
+
 
 
