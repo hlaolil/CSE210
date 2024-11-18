@@ -32,16 +32,5 @@ public class Entry
     {
         get { return _entryText; }
         set { _entryText = value; }
-    }
-
-    // Method to display the entry
-    public void Display()
-    {
-        Console.WriteLine($"Date: {Date}");
-        Console.WriteLine($"Prompt: {PromptText}");
-        Console.WriteLine($"Response: {EntryText}\n");
-    }
-
+    }    
 }
-
-

@@ -15,38 +15,40 @@ class Program
         {
             // Display the menu
             Console.WriteLine("What would you like to do?");
-            Console.WriteLine("1. Write a new entry");
-            Console.WriteLine("2. Display all entries");
-            Console.WriteLine("3. Save journal to file");
-            Console.WriteLine("4. Load journal from file");
-            Console.WriteLine("5. Exit");
-            Console.Write("Choose an option: ");
+    Console.WriteLine("1. Write a new entry");
+    Console.WriteLine("2. Display all entries");
+    Console.WriteLine("3. Save journal to file");
+    Console.WriteLine("4. Load journal from file");
+    Console.WriteLine("5. Edit an entry");
+    Console.WriteLine("6. Exit");
+    Console.Write("Choose an option: ");
 
-            // Get user input
-            string choice = Console.ReadLine();
+    string choice = Console.ReadLine();
 
-            // Handle user choice
-            switch (choice)
-            {
-                case "1":
-                    WriteNewEntry(journal, promptGenerator);
-                    break;
-                case "2":
-                    journal.DisplayAll();
-                    break;
-                case "3":
-                    SaveJournal(journal);
-                    break;
-                case "4":
-                    LoadJournal(journal);
-                    break;
-                case "5":
-                    running = false;
-                    Console.WriteLine("Goodbye!");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice. Please select a valid option.\n");
-                    break;
+    switch (choice)
+    {
+        case "1":
+            WriteNewEntry(journal, promptGenerator);
+            break;
+        case "2":
+            journal.DisplayAll();
+            break;
+        case "3":
+            SaveJournal(journal);
+            break;
+        case "4":
+            LoadJournal(journal);
+            break;
+        case "5":
+            EditJournalEntry(journal);
+            break;
+        case "6":
+            running = false;
+            Console.WriteLine("Goodbye!");
+            break;
+        default:
+            Console.WriteLine("Invalid choice. Please select a valid option.\n");
+            break;
             }
         }
     }
@@ -78,5 +80,21 @@ class Program
         Console.Write("Enter the filename to load the journal from (e.g., Journal.txt): ");
         string filename = Console.ReadLine();
         journal.LoadFromFile(filename);
+    }
+
+    static void EditJournalEntry(Journal journal)
+    {
+        journal.DisplayAll();
+        Console.Write("Enter the entry number to edit: ");
+        if (int.TryParse(Console.ReadLine(), out int entryNumber))
+        {
+            Console.Write("Enter the new response: ");
+            string newResponse = Console.ReadLine();
+            journal.EditEntry(entryNumber - 1, newResponse);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid entry number.\n");
+        }
     }
 }
