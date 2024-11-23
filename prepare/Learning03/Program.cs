@@ -19,5 +19,9 @@ class Program
         Fraction fraction3 = new Fraction(3, 4);
         Console.WriteLine($"Fraction3: {fraction3.GetFractionString()}"); // Output: 3/4
         Console.WriteLine($"Fraction3: {fraction3.GetDecimalValue()}"); // Output: 0.75
+
+        Fraction fraction4 = new Fraction(1, 3);
+        Console.WriteLine($"Fraction3: {fraction4.GetFractionString()}"); // Output: 1/3
+        Console.WriteLine($"Fraction3: {fraction4.GetDecimalValue()}"); // Output: 0.33
     }
 }
