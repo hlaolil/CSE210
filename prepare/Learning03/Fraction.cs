@@ -29,26 +29,6 @@ public class Fraction
         _bottom = bottom;
     }
 
-    // Properties
-    public int Top
-    {
-        get { return _top; }
-        set { _top = value; }
-    }
-
-    public int Bottom
-    {
-        get { return _bottom; }
-        set
-        {
-            if (value == 0)
-            {
-                throw new ArgumentException("Denominator cannot be zero.");
-            }
-            _bottom = value;
-        }
-    }
-
     // Method to get fraction as a string
     public string GetFractionString()
     {
