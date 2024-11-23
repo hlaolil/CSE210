@@ -8,13 +8,16 @@ class Program
         // Default constructor
         Fraction fraction1 = new Fraction();
         Console.WriteLine($"Fraction1: {fraction1.GetFractionString()}"); // Output: 1/1
+        Console.WriteLine($"Fraction1: {fraction1.GetDecimalValue()}"); // Output: 1
 
         // Single-parameter constructor
         Fraction fraction2 = new Fraction(5);
         Console.WriteLine($"Fraction2: {fraction2.GetFractionString()}"); // Output: 5/1
+        Console.WriteLine($"Fraction2: {fraction2.GetDecimalValue()}"); // Output: 5
 
         // Two-parameter constructor
         Fraction fraction3 = new Fraction(3, 4);
         Console.WriteLine($"Fraction3: {fraction3.GetFractionString()}"); // Output: 3/4
+        Console.WriteLine($"Fraction3: {fraction3.GetDecimalValue()}"); // Output: 0.75
     }
 }
