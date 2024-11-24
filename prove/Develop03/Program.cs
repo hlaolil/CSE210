@@ -9,7 +9,6 @@ class Program
         Scripture scripture = new Scripture(scriptureReference, "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.");
 
         // Initial display
-        Console.WriteLine("Original Scripture:");
         Console.WriteLine(scripture.GetDisplayText());
         Console.WriteLine();
 

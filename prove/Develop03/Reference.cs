@@ -11,7 +11,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = verse;
-        _endVerse = null; // No end verse for single verse references
+        _endVerse = null;
     }
 
     // Constructor for verse range
@@ -22,7 +22,13 @@ public class Reference
         _verse = verse;
         _endVerse = endVerse;
     }
-    
+
+    // Override ToString to return the formatted display text
+    public override string ToString()
+    {
+        return GetDisplayText();  // Reusing existing method
+    }
+
     // Method to return formatted reference text
     public string GetDisplayText()
     {
