@@ -10,12 +10,11 @@ class Program
 
         // Initial display
         Console.WriteLine(scripture.GetDisplayText());
-        Console.WriteLine();
 
         // Hide and display words in a loop
         while (!scripture.IsCompletelyHidden())
         {
-            Console.WriteLine("Press Enter to hide some words...");
+            Console.Write("Press Enter to hide some words...");
             Console.ReadLine();  // Wait for Enter key
 
             // Clear the console before updating the display
