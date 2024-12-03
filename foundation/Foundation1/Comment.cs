@@ -1,18 +1,26 @@
 using System;
-using System.Collections.Generic;
 
 public class Comment
-    {
-        public string CommenterName { get; set; }
-        public string CommentText { get; set; }
+{
+    private string _commenterName;
+    private string _commentText;
 
-        // Constructor
-        public Comment(string commenterName, string commentText)
-        {
-            CommenterName = commenterName;
-            CommentText = commentText;
-        }
+    public string CommenterName
+    {
+        get { return _commenterName; }
+        set { _commenterName = value; }
     }
 
-    
+    public string CommentText
+    {
+        get { return _commentText; }
+        set { _commentText = value; }
+    }
 
+    // Constructor
+    public Comment(string commenterName, string commentText)
+    {
+        _commenterName = commenterName;
+        _commentText = commentText;
+    }
+}
