@@ -1,9 +1,27 @@
 using System;
 
-class Program
+
+class WrittenAssignment : Assignment
 {
-    static void Main(string[] args)
+    private string _title;
+
+    // Constructor
+    public WrittenAssignment(string topic, string studentName, string title)
+        : base(topic, studentName)
     {
-        Console.WriteLine("Hello Learning05 World!");
+        _title = title;
+    }
+
+    // Properties
+    public string Title
+    {
+        get { return _title; }
+        set { _title = value; }
+    }
+
+    // Method to get writing info
+    public string GetWritingInfo()
+    {
+        return $"Title: {Title}";
     }
 }
