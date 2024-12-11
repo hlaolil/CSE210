@@ -32,7 +32,7 @@ public class ReflectingActivity : Activity
         foreach (var question in _questions)
         {
             Console.WriteLine(question);
-            ShowSpinner(3);
+            ShowSpinner(10);
         }
     }
 
