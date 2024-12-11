@@ -31,13 +31,13 @@ public class Program
             switch (choice)
             {
                 case "1":
-                    breathing.Run();
+                    breathingActivity.Run();
                     break;
                 case "2":
-                    listing.Run();
+                    listingActivity.Run();
                     break;
                 case "3":
-                    reflecting.Run();
+                    reflectingActivity.Run();
                     break;
                 case "4":
                     Console.WriteLine("Exiting the program. Goodbye!");
