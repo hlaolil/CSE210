@@ -14,9 +14,9 @@ public class BreathingActivity : Activity
         for (int i = 0; i < Duration / 2; i++)
         {
             Console.WriteLine("Breathe in...");
-            ShowSpinner(4);
+            ShowSpinner(6);
             Console.WriteLine("Breathe out...");
-            ShowSpinner(4);
+            ShowSpinner(6);
         }
         DisplayEndingMessage();
     }
