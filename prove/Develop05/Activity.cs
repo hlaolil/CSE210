@@ -47,17 +47,9 @@ public class Activity
         for (int i = 0; i < seconds; i++)
         {
             Console.Write("|\b/\b-\b\\\b");
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(250);
         }
         Console.WriteLine();
     }
 
-    public void ShowCountDown(int seconds)
-    {
-        for (int i = seconds; i > 0; i--)
-        {
-            Console.WriteLine(i);
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
 }
