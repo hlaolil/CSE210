@@ -5,7 +5,7 @@ public class Program
 {
     public static void Main()
     {
-        var breathingActivity = new BreathingActivity("Breathing Exercise", "A simple breathing exercise to relax.", 60);
+        var breathingActivity = new BreathingActivity("Breathing Exercise", "A simple breathing exercise to relax.", 10);
         
 
         var listingPrompts = new List<string> { "Name things you are grateful for.", "List your favorite hobbies.", "What are your proudest achievements?", "Who inspires you the most?", "Describe places you want to visit." };
