@@ -1,9 +1,23 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning06 World!");
+        
+        List<Shape> shapes = new List<Shape>
+        {
+            new Square("Red", 4),
+            new Rectangle("Blue", 3, 5),
+            new Circle("Green", 2),
+            new Square("Yellow", 6),
+            new Rectangle("Purple", 7, 2)
+        };
+
+        foreach (var shape in shapes)
+        {
+            Console.WriteLine($"{shape} Area = {shape.ComputeArea():F2}");
+        }
     }
 }
