@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
 public class ChecklistGoal : Goal
 {
     private int _amountCompleted;
