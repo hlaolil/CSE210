@@ -17,7 +17,7 @@ class Program
 
         foreach (var shape in shapes)
         {
-            Console.WriteLine($"{shape} Area = {shape.ComputeArea():F2}");
+            Console.WriteLine($"The {shape.Color} shape is a {shape} of Area = {shape.ComputeArea():F2}");
         }
     }
 }
