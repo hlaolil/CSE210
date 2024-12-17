@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
 public class GoalManager
 {
     private List<Goal> _goals;
