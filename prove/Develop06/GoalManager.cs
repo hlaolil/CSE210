@@ -174,7 +174,7 @@ public class GoalManager
                     {
                         case "SimpleGoal":
                             bool isComplete = bool.Parse(parts[4]);
-                            _goals.Add(new SimpleGoal(name, description, points) { IsComplete = isComplete });
+                            _goals.Add(new SimpleGoal(name, description, points));
                             break;
 
                         case "EternalGoal":
@@ -186,9 +186,7 @@ public class GoalManager
                             int bonus = int.Parse(parts[5]);
                             int amountCompleted = int.Parse(parts[6]);
                             _goals.Add(new ChecklistGoal(name, description, points, target, bonus)
-                            {
-                                AmountCompleted = amountCompleted
-                            });
+                           );
                             break;
 
                         default:
