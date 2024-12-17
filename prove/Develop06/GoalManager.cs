@@ -139,10 +139,8 @@ public class GoalManager
     {
         using (StreamWriter writer = new StreamWriter(filePath))
         {
-            // Write the player's score as the first line
             writer.WriteLine(_score);
 
-            // Write each goal to the file
             foreach (var goal in _goals)
             {
                 writer.WriteLine(goal.GetStringRepresentation());
@@ -158,10 +156,9 @@ public class GoalManager
         {
             using (StreamReader reader = new StreamReader(filePath))
             {
-                // Read the player's score from the first line
                 _score = int.Parse(reader.ReadLine());
 
-                _goals.Clear(); // Clear the existing goals list
+                _goals.Clear();
 
                 string line;
                 while ((line = reader.ReadLine()) != null)
