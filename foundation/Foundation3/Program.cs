@@ -8,9 +8,9 @@ class Program
        
         var activities = new List<Activity>
         {
-            new Running(new DateTime(2022, 11, 3), 30, 4.8), // Distance in km
-            new Cycling(new DateTime(2022, 11, 4), 45, 20),  // Speed in kph
-            new Swimming(new DateTime(2022, 11, 5), 40, 30)  // Laps
+            new Running(new DateTime(2024, 12, 3), 30, 4.8),
+            new Cycling(new DateTime(2024, 12, 4), 45, 20),  
+            new Swimming(new DateTime(2024, 12, 5), 40, 30)  
         };
 
       
