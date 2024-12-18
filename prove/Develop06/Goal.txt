@@ -1,1 +1,2 @@
-
+0
+SimpleGoal:pray 1 hour daily,pray for 1 hour daily,100,False
